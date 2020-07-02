@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Probably the best app in the world</title>
+</head>
+
+<body>
+  <div class="login">
+    <h1>Input parameters to calculate the price</h1>
+
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="CRIM" placeholder="per capita crime rate by town eg. 0.25" required="required"
+        size="60" /><br>
+      <input type="text" name="ZN" placeholder="proportion of residential land zoned for lots over 25,000 sq.ft. eg. 12"
+        required="required" size="60" /><br>
+      <input type="text" name="INDUS" placeholder="proportion of non-retail business acres per town eg. 7"
+        required="required" size="60" /><br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+  </div>
+  {{prediction_text}}
+
+</body>
+
+</html>
